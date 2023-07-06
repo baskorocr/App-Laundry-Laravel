@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Print Invoice</title>
-    <link href="{{asset('css/cetak.css')}}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{secure_asset('css/cetak.css')}}" rel="stylesheet">
+    <link href="{{secure_asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     
@@ -21,7 +21,7 @@
                                 <table width="100%" cellpadding="0" cellspacing="0">
                                     <tbody><tr>
                                         <td class="content-block">
-                                        <img src="{{asset('assets/img/img_properties/laundry.png')}}" class=" logo mt-3 mb-4" alt="gambar">
+                                        <img src="{{secure_asset('assets/img/img_properties/laundry.png')}}" class=" logo mt-3 mb-4" alt="gambar">
                                         <h2>Thanks for Order in Our Service</h2>
                                         </td>
                                     </tr>

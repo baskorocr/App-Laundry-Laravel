@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplikasi Laundry</title>
-    <link href="{{asset('css/slide.css')}}" rel="stylesheet">
+    <link href="{{secure_asset('css/slide.css')}}" rel="stylesheet">
     
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -22,7 +22,7 @@
             <div class=" image-text">
                 <span class="image">
           
-                <img class="bx" src="{{asset('assets/img/img_properties/service.png')}}"/>
+                <img class="bx" src="{{secure_asset('secure_assets/img/img_properties/service.png')}}"/>
                 </span>
 
                 <div class="text logo-text mt-3">
@@ -93,7 +93,7 @@
     <main class="">
             @yield('contents')
     </main>
-    <script src=" {{asset('js/slide.js')}}"></script>
+    <script src=" {{secure_asset('js/slide.js')}}"></script>
 
    </body>
 </html>
