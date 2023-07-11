@@ -251,7 +251,7 @@ WhatsApp yang sudah tersedia</p>
                            
 <div class="col-md-2 col-sm-4">
 <div class="address">
-<h3>Paket</h3>
+<h3 style="color:#ffffff;">Paket</h3>
 <ul class="Menu_footer">
 <li><a class="nav-item">Kiloan</a></li>
 <li><a class="nav-item">Load</a></li>

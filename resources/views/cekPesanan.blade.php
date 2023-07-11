@@ -85,7 +85,7 @@
           <a class="text-light nav-item nav-link page-scroll disabled"  href="https://betterlaundry.000webhostapp.com/index.php">About</a>
           <a class="text-light nav-item nav-link page-scroll disabled"  href="https://betterlaundry.000webhostapp.com/index.php">Service</a>  
           <a class="text-light nav-item nav-link page-scroll disabled"  href="https://betterlaundry.000webhostapp.com/index.php">Outlet</a>
-          <a class="text-light nav-item nav-link page-scroll" href="{{asset('assets/img/slider/minimal.jpeg')}}">Ketentuan Pick-Up</a>
+          <a class="text-light nav-item nav-link page-scroll" href="{{secure_asset('assets/img/slider/minimal.jpeg')}}">Ketentuan Pick-Up</a>
           <a class="text-light nav-item nav-link" href="{{route('cekPesanan')}}"><i class="fas fa-fw fa-check"></i>Cek Status Pakaian</a>
       	  </div>
         	</div>
@@ -261,7 +261,7 @@ WhatsApp yang sudah tersedia</p>
     <script src="https://betterlaundry.000webhostapp.com/assets/js/config-sweetalert2.js"></script>
     <script src="https://betterlaundry.000webhostapp.com/assets/js/config-select2.js"></script>
 
-    <script src=" {{asset('js/cek.js')}}"></script>
+    <script src=" {{secure_asset('js/cek.js')}}"></script>
     
     <script>
         // event pada saat link diklik

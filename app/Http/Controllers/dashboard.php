@@ -123,11 +123,7 @@ class dashboard extends Controller
 
     }
     
-    public function rubahStatus(Request $request)
-    {
-        return view('editStatus',["data"=>$request->Invoice]);
-
-    }
+   
 
     
 
