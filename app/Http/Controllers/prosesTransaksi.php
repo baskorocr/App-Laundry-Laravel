@@ -21,6 +21,7 @@ class prosesTransaksi extends Controller
         return view('listTransaksiProses',['data'=> $proses]);
     }
     public function transaksiProses(Request $request){
+        
         $temp=0;
         if($request->berat != null){
             $temp = $request->berat;

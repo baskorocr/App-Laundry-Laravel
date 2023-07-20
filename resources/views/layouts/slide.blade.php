@@ -14,6 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <meta name="csrf-token" content="{{ csrf_token() }}">   
+    
+
 </head>
 <body>
 @include('sweetalert::alert')
@@ -64,6 +66,18 @@
                         <a href="{{route('listTransaksi')}}">
                             <i class='bx bx-message-square-check  icon' ></i>
                             <span class="text nav-text">Transaksi Selesai</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="{{route('info')}}">
+                            <i class='bx bx-news   icon' ></i>
+                            <span class="text nav-text">Pengumuman</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="{{route('setting')}}">
+                            <i class='bx bx-cog   icon' ></i>
+                            <span class="text nav-text">Setting Page</span>
                         </a>
                     </li>
                     

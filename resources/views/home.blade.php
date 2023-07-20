@@ -1,3 +1,20 @@
+@if($setting == 0)
+<div class="d-flex justify-content-center">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<div class="">
+  <div class="row">
+  <h2 class="mt-5">Setting Page Belum di setting</h2>
+  </div>
+  <div class="row">
+  <h5 class="ms-3">Silakan isi setting page di Dashboard</h5>
+  </div>
+  <div class="row">
+  <a class="btn btn-primary" href="/login" role="button">Link</a>
+  </div>
+</div>
+
+</div>
+@else
 <!DOCTYPE html>
 <html lang="en" id="home">
   <head>
@@ -16,6 +33,7 @@
     <!-- Icon Title -->
     <link rel="icon" href="https://betterlaundry.000webhostapp.com/assets/img/img_properties/logo.jpeg">
     
+	</style>
     <style>
       body {
         font-size: 1.2rem;
@@ -98,6 +116,7 @@ td{
     	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       	<div class="navbar-nav ml-auto">
         	<a class="text-light nav-item nav-link page-scroll" href="#tentang">About</a>
+          <a class="text-light nav-item nav-link page-scroll" href="#Pengumuman">Pengumuman</a>
 	        <a class="text-light nav-item nav-link page-scroll" href="#service-section">Service</a>       
         	<a class="text-light nav-item nav-link page-scroll" href="#Outlet">Outlet</a>
           <a class="text-light nav-item nav-link page-scroll" href="{{asset('assets/img/slider/minimal.jpeg')}}">Syarat Pick-Up</a>
@@ -112,8 +131,8 @@ td{
 <div class="carousel-item active">
 <img src="assets/img/slider/Better.jpeg" class="d-block w-100" alt="gambar">
 <div class="carousel-caption">
-	<h3>The Better Laundry I</h3>
-	<p>Jl. H. Saikin, RT.8/RW.8, Pd. Pinang, Kec. Kby. Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12310</p>
+	<h3>{{$data->NamaToko}}</h3>
+	<p>{{$data->Alamat}}</p>
 </div>
 </div>
 
@@ -127,17 +146,46 @@ td{
 	<div class="row">
     	<div class="col-lg my-4">
     	<h2>About Better Laundry</h2>
-	<p class="dummy_text">The Better Laundry kami yang memiliki pelayanan service terbaik, membantu meringankan aktivitas sehari-hari anda. Dapat melakukan pick-up & delivery pakaian anda dengan ketentuan yang sudah ditetapkan. Kini Better Laundry pun hadir dengan mengikuti perkembangan teknologi melalui pemanfaatan website. Dimana anda dapat melakukan monitoring status pakaian anda dengan mudah disistem tanpa menghubungi pihak Better Laundr</p>
+	<p class="dummy_text">{{$data->About}}</p>
+  <br>
+  <br>
+  <section id="Pengumuman" class="service-section">
+  <div class="services_section layout_padding">
+  <div class="container ">
+    <h2>Pengumuman</h2>
+    <p class="many_taital justify-content-center">Pengumuman untuk Customer Laundry </p>
+    <br>
+    <div class=" mt-5">
+            
+                    
+                    <div class="row">
+                    @foreach($news as $p)
+                    <div class="card justify-content-center ml-5" style="width: 18rem;">
+  
+                      <div class="card-body  justify-content-center ">
+                        <h5 class="card-title text-center"> {{ $p->title}}</h5>
+                        <div class="text-center">
+                        <a href="pengumuman/{{ $p->id }}" class="btn ms-5 btn-primary">Baca Disini</a>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    @endforeach
+                    </div>
+                    <br>
+                       
+            <div class="d-flex justify-content-center">
+            {!! $news->links() !!}
+            </div>
+        </div>
+  
+</selection>
 
-    	</div>
-    	</div>
-  	</div>
-
-
-
-<!--Our Service-->
-<section id="service-section" class="service-section">
-<div class="services_section layout_padding">
+  <br>
+  <br>
+  <br>
+  <section id="service-section" class="service-section">
+  <div class="services_section layout_padding">
          <div class="container">
             <h2>Our Services</h2>
             <p class="many_taital">Temukan apa yang kami miliki & tawarkan kepada Anda </p>
@@ -194,46 +242,28 @@ td{
             </div>
          </div>
       </div>
+    	</div>
+    	</div>
+  	</div>
+</selection>
+
+
+
+
+<!--Our Service-->
+
+
       <!-- services section end -->
       
 
 
 <!--Outlet-->
-<section id= "Outlet" class="Outlet">
-	<div class="container">
-	<h2>Outlet Better Laundry</h2>
-	<div class="table-responsive">
-				<table class="table table-hover table-bordered">
-				<thead>
-				<tr class="th-color">
-					<th>No</th>
-					<th>Nama Outlet</th>
-					<th>Alamat Outlet</th>
-				</tr>
-				</thead>
-				<tbody>
-						
-												<tr>
-				<td>1</td>
-				<td>Better Laundry I</td>
-				<td>Jl. H. Saikin, RT.8/RW.8, Pd. Pinang, Kec. Kby. Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12310</td>
-				</tr>
-								<tr>
-				<td>2</td>
-				<td>Better Laundry II</td>
-				<td>Jl. Pupan No.19, RT.9/RW.RW, Pd. Pinang, Kec. Kby. Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12310</td>
-				</tr>
-								</tbody>
-				</table>
-</div>
-</div>
-</div><br>
-</section>
+
 
   
 <!-- FOOTER-->
 
-<footer>
+<footer class="mt-5">
 <div class="footer">
 <div class="container">
 <div class="row">
@@ -271,14 +301,14 @@ WhatsApp yang sudah tersedia</p>
                               
 <ul class="social_icon">
       <li><a href="https://instagram.com/thebetterlaundry?igshid=NDk5N2NlZjQ=" target="_blank"><i class="fab fa-fw fa-instagram"></i>Instagram</a></li>
-      <li><a href="https://wa.me/6281249005571?text=Hallo%20Kak..bisa%20pick-up%20cucian%20saya%3F%0A%0A%0ANama%3A%0AAlamat%20%3A%20(tulis%2Fkirim%20link%20dan%20foto%20lokasi%20penjemputan)" target="_blank"><i class="fab fa-fw fa-whatsapp"></i>WhatsApp</a></li>  
+      <li><a href="https://wa.me/{{$data->Nomer}}?text=Hallo%20Kak..bisa%20pick-up%20cucian%20saya%3F%0A%0A%0ANama%3A%0AAlamat%20%3A%20(tulis%2Fkirim%20link%20dan%20foto%20lokasi%20penjemputan)" target="_blank"><i class="fab fa-fw fa-whatsapp"></i>WhatsApp</a></li>  
       <li><a href="https://ibb.co/hMDY6C1" target="_blank">Ketentuan pick-up</a></li> 
 </ul>
 </div>
 <div class="col-md-7 col-sm-6">
 <div class="address">
 <h3>Location </h3>
-<p>Jl. H. Saikin, RT.8/RW.8, Pd. Pinang, Kec. Kby. Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12310</p>
+<p>{{$data->Alamat}}</p>
 </div>
 </div>
 </div>
@@ -286,7 +316,7 @@ WhatsApp yang sudah tersedia</p>
 </div>
 <div class="maps">
 <div class="container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.838810910118!2d106.7683015136999!3d-6.284908695451138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1772b9e5e5b%3A0x67156b6b90387da9!2sThe%20Better%20Laundry!5e0!3m2!1sid!2sid!4v1677646918574!5m2!1sid!2sid"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="{{$data->Link}}"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </footer>
@@ -346,3 +376,4 @@ WhatsApp yang sudah tersedia</p>
         });
     </script>
  </html>
+@endif

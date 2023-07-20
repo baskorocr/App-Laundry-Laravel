@@ -101,7 +101,7 @@
     <div class="form-group mt-3 ">
     <label for="kode_invoice ">Masukkan Kode Invoice Anda</label>
         <input type="text" placeholder="Ketik kode" id="kode_invoice" class="g text-center form-control" name="kode_invoice">
-        </div>
+      </div>
 
    
     <div class="form-group">

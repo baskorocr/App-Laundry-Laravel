@@ -40,6 +40,17 @@ Route::get('/deleteProses/{Invoice}', [\App\Http\Controllers\prosesTransaksi::cl
 Route::post('/cek',  [\App\Http\Controllers\cekPesanan::class, 'cek'])->name('cek');
 Route::get('/rubahStatus/{Invoice}',  [\App\Http\Controllers\prosesTransaksi::class, 'rubahStatus'])->name('rubahStatus');
 Route::post('/prosesEditStatus',  [\App\Http\Controllers\prosesTransaksi::class, 'prosesEditStatus'])->name('prosesEditStatus');
+Route::get('/info',  [\App\Http\Controllers\infoData::class, 'index'])->name('info');
+Route::post('/infoPosts', [\App\Http\Controllers\infoData::class, 'store'])->name('infoPosts');
+Route::get('/CreateInfo',  [\App\Http\Controllers\infoData::class, 'create'])->name('CreateInfo');
+Route::get('/deleteInfo/{id}',  [\App\Http\Controllers\infoData::class, 'deleteInfo'])->name('deleteInfo');
+Route::get('/editInfo/{id}',  [\App\Http\Controllers\infoData::class, 'editInfo'])->name('editInfo');
+Route::post('/updatePosts', [\App\Http\Controllers\infoData::class, 'updatePosts'])->name('updatePosts');
+Route::get('/setting',  [\App\Http\Controllers\settingPage::class, 'index'])->name('setting');
+Route::post('/settingPost',  [\App\Http\Controllers\settingPage::class, 'settingPost'])->name('settingPost');
+Route::post('/settingEdit',  [\App\Http\Controllers\settingPage::class, 'settingEdit'])->name('settingEdit');
+Route::get('/pengumuman/{id}',  [\App\Http\Controllers\index::class, 'pengumuman'])->name('pengumuman');
+
 
 
 
