@@ -17,6 +17,7 @@ class CreateInfosTable extends Migration
             $table->id();
             $table->string('title');
             $table->longText('information');
+            $table->timestamp('created_at')->useCurrent();
         });
       
     }

@@ -12,7 +12,7 @@ class index extends Controller
     public function index(){
         $count = setting::count();
         $data = setting::first();
-        $news = DB::table('infos')->paginate(3);
+        $news = DB::table('infos')->orderBy('created_at', 'DESC')->paginate(3);
 
         return view('home',['setting'=>$count, 'data'=>$data,  'news'=>$news]);
     
