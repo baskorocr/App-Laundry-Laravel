@@ -9,7 +9,7 @@
   <h5 class="ms-3">Silakan isi setting page di Dashboard</h5>
   </div>
   <div class="row">
-  <a class="btn btn-primary" href="/login" role="button">Link</a>
+  <a class="btn btn-primary" href="/login" role="button">Login</a>
   </div>
 </div>
 
